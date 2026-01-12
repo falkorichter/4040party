@@ -232,6 +232,16 @@
             opacity: 0.9;
         }
 
+        footer p:last-child {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .rsvp-deadline {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -302,10 +312,33 @@
         <div class="main-content">
             <!-- Poster Section -->
             <section class="poster-section">
-                <div class="poster-placeholder">
+                <div class="poster-placeholder" id="posterContainer">
                     <!-- Replace the src below with your actual poster image -->
-                    <img src="poster.jpg" alt="4040 Party Poster" onerror="this.parentElement.innerHTML='<p style=\'padding: 100px 40px; color: #999; font-size: 1.2em;\'>📸<br>Add your party poster here<br><small style=\'font-size: 0.8em; display: block; margin-top: 10px;\'>Save your poster image as \'poster.jpg\' in the same folder</small></p>'">
+                    <img src="poster.jpg" alt="4040 Party Poster" id="posterImage">
+                    <noscript>
+                        <p style="padding: 100px 40px; color: #999; font-size: 1.2em;">
+                            📸<br>Add your party poster here<br>
+                            <small style="font-size: 0.8em; display: block; margin-top: 10px;">
+                                Save your poster image as 'poster.jpg' in the same folder
+                            </small>
+                        </p>
+                    </noscript>
                 </div>
+                <script>
+                    // Handle missing poster image safely
+                    document.getElementById('posterImage').onerror = function() {
+                        var container = document.getElementById('posterContainer');
+                        this.style.display = 'none';
+                        var message = document.createElement('p');
+                        message.style.cssText = 'padding: 100px 40px; color: #999; font-size: 1.2em; white-space: pre-line;';
+                        message.textContent = '📸\n\nAdd your party poster here\n\n';
+                        var small = document.createElement('small');
+                        small.style.cssText = 'font-size: 0.8em; display: block; margin-top: 10px;';
+                        small.textContent = "Save your poster image as 'poster.jpg' in the same folder";
+                        message.appendChild(small);
+                        container.appendChild(message);
+                    };
+                </script>
             </section>
 
             <!-- Party Information -->
@@ -354,7 +387,7 @@
                 <p>Please let us know if you'll be joining the celebration!</p>
                 <!-- Replace the href with your RSVP email or form link -->
                 <a href="mailto:your-email@example.com?subject=RSVP for 4040 Party" class="rsvp-button">RSVP Now</a>
-                <p style="margin-top: 20px; font-size: 1em;">RSVP by [Add Deadline Date]</p>
+                <p class="rsvp-deadline">RSVP by [Add Deadline Date]</p>
             </section>
         </div>
 
