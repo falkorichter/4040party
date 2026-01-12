@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You're invited to the 4040 Party! Join us for an unforgettable celebration.">
+    <title>4040 Party - You're Invited!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .poster-section {
+            background: #f8f9fa;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .poster-placeholder {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: #fff;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .poster-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .poster-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .info-section {
+            padding: 50px 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .info-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-card h3::before {
+            content: '🎉';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-card.date h3::before { content: '📅'; }
+        .info-card.time h3::before { content: '⏰'; }
+        .info-card.location h3::before { content: '📍'; }
+        .info-card.dress h3::before { content: '👔'; }
+
+        .info-card p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .rsvp-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .rsvp-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .rsvp-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            color: #667eea;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .rsvp-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .additional-info {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+
+        .additional-info h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .additional-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .additional-info li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .additional-info li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .info-section,
+            .poster-section,
+            .additional-info {
+                padding: 30px 20px;
+            }
+
+            .rsvp-section {
+                padding: 40px 20px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎊 4040 Party 🎊</h1>
+            <p class="tagline">You're Invited to an Unforgettable Celebration!</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Poster Section -->
+            <section class="poster-section">
+                <div class="poster-placeholder">
+                    <!-- Replace the src below with your actual poster image -->
+                    <img src="poster.jpg" alt="4040 Party Poster" onerror="this.parentElement.innerHTML='<p style=\'padding: 100px 40px; color: #999; font-size: 1.2em;\'>📸<br>Add your party poster here<br><small style=\'font-size: 0.8em; display: block; margin-top: 10px;\'>Save your poster image as \'poster.jpg\' in the same folder</small></p>'">
+                </div>
+            </section>
+
+            <!-- Party Information -->
+            <section class="info-section">
+                <h2 class="section-title">Event Details</h2>
+                <div class="info-grid">
+                    <div class="info-card date">
+                        <h3>Date</h3>
+                        <p><strong>Saturday, [Add Date]</strong><br>
+                        Mark your calendars!</p>
+                    </div>
+                    <div class="info-card time">
+                        <h3>Time</h3>
+                        <p><strong>[Add Time]</strong><br>
+                        Festivities begin promptly</p>
+                    </div>
+                    <div class="info-card location">
+                        <h3>Location</h3>
+                        <p><strong>[Add Venue Name]</strong><br>
+                        [Add Address]<br>
+                        [Add City, State ZIP]</p>
+                    </div>
+                    <div class="info-card dress">
+                        <h3>Dress Code</h3>
+                        <p><strong>[Add Dress Code]</strong><br>
+                        Come ready to celebrate!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information -->
+            <section class="additional-info">
+                <h3>What to Expect</h3>
+                <ul>
+                    <li>Delicious food and drinks</li>
+                    <li>Great music and dancing</li>
+                    <li>Fun activities and entertainment</li>
+                    <li>Memorable moments with friends</li>
+                    <li>Surprises throughout the evening</li>
+                </ul>
+            </section>
+
+            <!-- RSVP Section -->
+            <section class="rsvp-section">
+                <h2>Can You Make It?</h2>
+                <p>Please let us know if you'll be joining the celebration!</p>
+                <!-- Replace the href with your RSVP email or form link -->
+                <a href="mailto:your-email@example.com?subject=RSVP for 4040 Party" class="rsvp-button">RSVP Now</a>
+                <p style="margin-top: 20px; font-size: 1em;">RSVP by [Add Deadline Date]</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>We can't wait to celebrate with you! 🎉</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Questions? Contact us at [your-email@example.com]</p>
+        </footer>
+    </div>
+</body>
+</html>
