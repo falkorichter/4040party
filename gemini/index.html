@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Date - Double Power 40. Geburtstag</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-pink: #ff00cc;
+            --neon-blue: #00ffff;
+            --neon-yellow: #ffee00;
+            --bg-dark: #120d21;
+            --text-white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(45deg, #1a1a2e 25%, transparent 25%, transparent 75%, #1a1a2e 75%, #1a1a2e),
+                linear-gradient(45deg, #1a1a2e 25%, transparent 25%, transparent 75%, #1a1a2e 75%, #1a1a2e);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            font-family: 'Righteous', cursive;
+            color: var(--text-white);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .flyer-container {
+            position: relative;
+            background: linear-gradient(135deg, #0d0029, #240046);
+            border: 4px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-pink), inset 0 0 20px var(--neon-blue);
+            max-width: 600px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        /* Decorative Corners */
+        .flyer-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 15px solid transparent;
+            border-image: linear-gradient(to bottom right, var(--neon-yellow), var(--neon-pink)) 1;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(to bottom, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 0px #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 3rem;
+            color: var(--neon-pink);
+            text-shadow: 2px 2px 0px #fff, 0 0 10px var(--neon-pink);
+            margin: 10px 0 20px 0;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .photo-frame {
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            position: relative;
+            background: #000;
+            transform: rotate(-2deg);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            display: block;
+            /* Placeholder styling if image fails to load */
+            min-height: 300px; 
+            object-fit: cover;
+        }
+
+        .tagline {
+            font-family: 'Anton', sans-serif;
+            color: var(--neon-yellow);
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 0 #000;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .details-box {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.2rem;
+            color: #fff;
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .label {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        .highlight {
+            color: var(--neon-pink);
+        }
+
+        .footer-note {
+            font-family: 'Permanent Marker', cursive;
+            color: var(--neon-pink);
+            font-size: 1.5rem;
+            margin-top: 20px;
+            transform: rotate(-1deg);
+        }
+
+        .location {
+            font-family: 'Righteous', cursive;
+            color: var(--neon-yellow);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Icon decoration */
+        .icon {
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+
+        /* Mobile Adjustment */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .tagline { font-size: 1.2rem; }
+            .flyer-container { padding: 1rem; border-width: 2px;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flyer-container">
+        <h1>SAVE THE DATE!</h1>
+        <h2>DOUBLE POWER! 💥</h2>
+
+        <div class="photo-frame">
+            <img src="your-image.jpg" alt="80s Workout Couple">
+        </div>
+
+        <p class="tagline">40 JAHRE... DAS IST ERST DAS WARM-UP!</p>
+
+        <div class="details-box">
+            <div>
+                <span class="icon">📼</span>
+                <span class="label">WER:</span> Ihr? Gib uns Bescheid! ⚡
+            </div>
+            <div>
+                <span class="label">WANN:</span> 18. April 2026
+            </div>
+            <div>
+                <span class="label">DRESSCODE:</span> <span class="highlight">80er, Eighties</span>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            DETAIL MASTERPLAN FOLGT!
+        </div>
+
+        <div class="location">
+            Location: KUFA, Lehrter Str. Berlin! 📍
+        </div>
+    </div>
+
+</body>
+</html>
