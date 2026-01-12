@@ -3,6 +3,7 @@
 A vibrant 80s/retro themed landing page for a 40th birthday party celebration! 🎉
 
 Available at oder https://falkorichter.github.io/4040party/
+Available at oder https://falkorichter.github.io/4040party/gemini/ for a version that was created by gemini (please ignore for now)
 
 ## 🎨 Features
 
