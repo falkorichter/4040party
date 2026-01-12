@@ -1,0 +1,393 @@
+/* 80s Retro Party Landing Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+    background: #0a0e27;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Geometric Background */
+.geometric-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: 
+        linear-gradient(135deg, #0a0e27 0%, #1a1e47 100%);
+    overflow: hidden;
+}
+
+.geometric-bg::before,
+.geometric-bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.geometric-bg::before {
+    background: 
+        linear-gradient(45deg, transparent 40%, rgba(255, 0, 255, 0.3) 40%, rgba(255, 0, 255, 0.3) 50%, transparent 50%),
+        linear-gradient(-45deg, transparent 40%, rgba(0, 255, 255, 0.3) 40%, rgba(0, 255, 255, 0.3) 50%, transparent 50%);
+    background-size: 300px 300px;
+    background-position: 0 0, 150px 150px;
+    animation: geometricMove 20s linear infinite;
+}
+
+.geometric-bg::after {
+    background: 
+        linear-gradient(135deg, transparent 45%, rgba(255, 255, 0, 0.2) 45%, rgba(255, 255, 0, 0.2) 55%, transparent 55%),
+        linear-gradient(225deg, transparent 45%, rgba(0, 255, 0, 0.2) 45%, rgba(0, 255, 0, 0.2) 55%, transparent 55%);
+    background-size: 250px 250px;
+    background-position: 0 0, 125px 125px;
+    animation: geometricMove 15s linear infinite reverse;
+}
+
+@keyframes geometricMove {
+    0% { background-position: 0 0, 150px 150px; }
+    100% { background-position: 300px 300px, 450px 450px; }
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.title-main {
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #00d4ff,
+        0 0 40px #00d4ff,
+        0 0 50px #00d4ff,
+        3px 3px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.title-sub {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+    filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.6));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #00d4ff,
+            0 0 40px #00d4ff,
+            3px 3px 0 rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 
+            0 0 20px #fff,
+            0 0 30px #00d4ff,
+            0 0 40px #00d4ff,
+            0 0 50px #00d4ff,
+            0 0 60px #00d4ff,
+            3px 3px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Poster Frame */
+.poster-frame {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #00d4ff, #ff00ff, #ffff00);
+    border-radius: 15px;
+    box-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.5),
+        0 0 50px rgba(255, 0, 255, 0.3);
+    animation: frameGlow 3s ease-in-out infinite alternate;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+@keyframes frameGlow {
+    from {
+        box-shadow: 
+            0 0 30px rgba(0, 212, 255, 0.5),
+            0 0 50px rgba(255, 0, 255, 0.3);
+    }
+    to {
+        box-shadow: 
+            0 0 40px rgba(0, 212, 255, 0.7),
+            0 0 60px rgba(255, 0, 255, 0.5),
+            0 0 80px rgba(255, 255, 0, 0.3);
+    }
+}
+
+/* Tagline */
+.tagline {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.tagline p {
+    font-size: 2rem;
+    color: #ffff00;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 
+        2px 2px 0 rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(255, 255, 0, 0.8);
+    font-style: italic;
+}
+
+/* Event Details */
+.event-details {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid #00d4ff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+}
+
+.detail-label {
+    color: #00d4ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    min-width: 150px;
+}
+
+.detail-value {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Masterplan */
+.masterplan {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.masterplan p {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.6));
+}
+
+/* Location */
+.location {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.location-title {
+    font-size: 2rem;
+    color: #ffff00;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.location-details {
+    font-size: 1.8rem;
+    color: #ff00ff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.location-details div {
+    margin: 0.5rem 0;
+}
+
+/* Decorative Elements */
+.decorative-elements {
+    position: relative;
+}
+
+.cassette, .boombox, .star {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.cassette-left {
+    left: 5%;
+    top: -100px;
+    animation-delay: 0s;
+}
+
+.boombox-right {
+    right: 5%;
+    top: -100px;
+    animation-delay: 1s;
+}
+
+.star {
+    font-size: 2rem;
+}
+
+.star-1 {
+    left: 10%;
+    top: 50px;
+    animation-delay: 0.5s;
+}
+
+.star-2 {
+    right: 15%;
+    top: 100px;
+    animation-delay: 1.5s;
+}
+
+.star-3 {
+    left: 50%;
+    top: 150px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-main {
+        font-size: 2rem;
+    }
+    
+    .title-sub {
+        font-size: 1.8rem;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        line-height: 60px;
+    }
+    
+    .tagline p {
+        font-size: 1.3rem;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        margin-bottom: 0.5rem;
+    }
+    
+    .masterplan p {
+        font-size: 1.5rem;
+    }
+    
+    .location-title {
+        font-size: 1.5rem;
+    }
+    
+    .location-details {
+        font-size: 1.3rem;
+    }
+    
+    .cassette, .boombox {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .title-main {
+        font-size: 1.5rem;
+    }
+    
+    .title-sub {
+        font-size: 1.3rem;
+    }
+    
+    .poster-frame {
+        padding: 10px;
+    }
+    
+    .event-details {
+        padding: 1rem;
+    }
+}
