@@ -225,6 +225,63 @@ body {
     font-weight: bold;
 }
 
+/* News Section */
+.news {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid #ff00ff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.news-title {
+    font-size: 2rem;
+    color: #ff00ff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-item {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1.2rem 0;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-link {
+    color: #00d4ff;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+}
+
+.news-link:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
+}
+
+.instagram-embed-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+}
+
 /* Masterplan */
 .masterplan {
     text-align: center;
