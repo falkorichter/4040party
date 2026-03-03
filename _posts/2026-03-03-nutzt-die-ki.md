@@ -14,7 +14,7 @@ Nutzt Gemini und Co!
 
 Wenn ihr tolle Fotos generiert habt, schickt Sie an Falko oder Susi per Whatsapp/Signal. Wenn genug Fotos zusammenkommen, können wir die generierten Fotos auf der Party zeigen.
 
-<form action="https://formsubmit.co/c4146591baace61f70b409ce1a79caa1" method="POST">
+<form action="https://formsubmit.co/c4146591baace61f70b409ce1a79caa1" method="POST" enctype="multipart/form-data">
 
     <input type="hidden" name="_subject" value="Neue Outfit-Empfehlung für die Party! 🎵">
     <input type="hidden" name="_captcha" value="true">
