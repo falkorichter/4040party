@@ -26,7 +26,7 @@ layout: default
             '<div class="success-icon">🎉</div>' +
             '<h2 class="success-title">ERFOLG!</h2>' +
             '<p class="success-message"></p>' +
-            '<button class="success-close" onclick="this.closest(\'.success-overlay\').remove()">COOL! ✓</button>' +
+            '<button class="success-close" onclick="this.closest(\'.success-overlay\').remove();history.replaceState(null,\'\',location.pathname)">COOL! ✓</button>' +
             '</div>';
         overlay.querySelector('.success-message').textContent = message;
         document.body.appendChild(overlay);
