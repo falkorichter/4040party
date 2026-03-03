@@ -12,9 +12,15 @@ Schickt gerne eure Youtube Music/Spotify Playlist an Falko oder Susi damit wir d
 
 Oder probiert das hier:
 
-<form action="https://formsubmit.co/susifalkorichter+partymusic@gmail.com" method="POST" class="reservation-form">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="link" placeholder="Link zur eurer Playlist"required>
-  <button type="submit">Hit that song⚡</button>
+<form action="https://formsubmit.co/susifalkorichter+partymusic@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Neue Musik-Empfehlung für die Party! 🎵">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    
+    <input type="text" name="name" placeholder="Dein Name" required>
+    <input type="email" name="email" placeholder="deine@email.de" required>
+    <input type="text" name="link" placeholder="Link zur eurer Playlist (YouTube Music, Spotify, etc.)" required>
+    <textarea name="message" placeholder="Erzähl uns was über die Playlist... (optional)" rows="3"></textarea>
+    
+    <button type="submit">HIT THAT SONG! 🎸</button>
 </form>
