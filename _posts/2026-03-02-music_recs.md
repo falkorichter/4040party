@@ -16,7 +16,7 @@ Oder probiert das hier:
     <input type="hidden" name="_subject" value="Neue Musik-Empfehlung für die Party! 🎵">
     <input type="hidden" name="_captcha" value="true">
     <input type="hidden" name="_autoresponse" value="Danke für deine Musik Empfehlung!">
-    <input type="hidden" name="_next" value="https://falkorichter.github.io/4040party/news/music-recs/?status=success&message=Danke für deine Musik Empfehlung!">
+    <input type="hidden" name="_next" value="https://falkorichter.github.io/4040party/news/music-recs/?status=success&message=Danke%20f%C3%BCr%20deine%20Musik%20Empfehlung!">
 
     
     <input type="text" name="name" placeholder="Dein Name" required>
