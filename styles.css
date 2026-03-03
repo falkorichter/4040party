@@ -182,7 +182,6 @@ body {
     text-align: center;
     margin: 2rem 0;
 }
-
 .tagline p {
     font-size: 2rem;
     color: #ffff00;
@@ -204,14 +203,12 @@ body {
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
-
 .detail-item {
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
     font-size: 1.3rem;
 }
-
 .detail-label {
     color: #00d4ff;
     font-weight: bold;
@@ -219,7 +216,6 @@ body {
     margin-right: 1rem;
     min-width: 150px;
 }
-
 .detail-value {
     color: #ff6600;
     font-weight: bold;
@@ -235,7 +231,6 @@ body {
     padding: 2rem;
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 }
-
 .news-title {
     font-size: 2rem;
     color: #ff00ff;
@@ -245,12 +240,10 @@ body {
     margin-bottom: 1.5rem;
     text-align: center;
 }
-
 .news-list {
     list-style: none;
     padding: 0;
 }
-
 .news-item {
     font-size: 1.2rem;
     color: #fff;
@@ -258,25 +251,21 @@ body {
     padding-bottom: 1.2rem;
     border-bottom: 1px solid rgba(255, 0, 255, 0.3);
 }
-
 .news-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
 .news-link {
     color: #00d4ff;
     text-decoration: none;
     margin-left: 0.5rem;
     transition: color 0.2s;
 }
-
 .news-link:hover {
     color: #ffff00;
     text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
 }
-
 .instagram-embed-wrapper {
     margin-top: 1rem;
     text-align: center;
@@ -287,7 +276,6 @@ body {
     text-align: center;
     margin: 2rem 0;
 }
-
 .masterplan p {
     font-size: 2.5rem;
     background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
@@ -308,7 +296,6 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
 }
-
 .location-title {
     font-size: 2rem;
     color: #ffff00;
@@ -316,14 +303,12 @@ body {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
-
 .location-details {
     font-size: 1.8rem;
     color: #ff00ff;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
 }
-
 .location-details div {
     margin: 0.5rem 0;
 }
@@ -332,47 +317,39 @@ body {
 .decorative-elements {
     position: relative;
 }
-
 .cassette, .boombox, .star {
     position: absolute;
     font-size: 3rem;
     animation: float 3s ease-in-out infinite;
 }
-
 .cassette-left {
     left: 5%;
     top: -100px;
     animation-delay: 0s;
 }
-
 .boombox-right {
     right: 5%;
     top: -100px;
     animation-delay: 1s;
 }
-
 .star {
     font-size: 2rem;
 }
-
 .star-1 {
     left: 10%;
     top: 50px;
     animation-delay: 0.5s;
 }
-
 .star-2 {
     right: 15%;
     top: 100px;
     animation-delay: 1.5s;
 }
-
 .star-3 {
     left: 50%;
     top: 150px;
     animation-delay: 2s;
 }
-
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -387,7 +364,6 @@ body {
     margin-top: 0.5rem;
     transition: color 0.2s;
 }
-
 .back-link:hover {
     color: #ffff00;
     text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
@@ -396,7 +372,6 @@ body {
 .post-article {
     margin-top: 2rem;
 }
-
 .post-date {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
@@ -404,23 +379,26 @@ body {
     margin-bottom: 1.5rem;
     font-weight: normal;
 }
-
 .post-content {
     font-size: 1.2rem;
     color: #fff;
     line-height: 1.7;
 }
-
 .post-content p {
     margin: 1rem 0;
 }
-
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 2rem auto;
+}
 .post-content a {
     color: #00d4ff;
     text-decoration: none;
     transition: color 0.2s;
 }
-
 .post-content a:hover {
     color: #ffff00;
     text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
