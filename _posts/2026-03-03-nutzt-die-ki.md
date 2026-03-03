@@ -10,4 +10,4 @@ Nutzt Gemini und Co!
 
 ![Jorts]({{ '/assets/images/jorts.png' | relative_url }})
 
-Wenn ihr tolle Fotos generiert habt, schickt Sie an Falko oder Susi per Whatsapp/Signal.
+Wenn ihr tolle Fotos generiert habt, schickt Sie an Falko oder Susi per Whatsapp/Signal. Wenn genug Fotos zusammenkommen, können wir die generierten Fotos auf der Party zeigen.
