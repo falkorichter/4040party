@@ -13,3 +13,23 @@ layout: default
         {{ content }}
     </div>
 </article>
+
+<script>
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('status') === 'success') {
+        var message = params.get('message') || 'Erfolg!';
+        var overlay = document.createElement('div');
+        overlay.className = 'success-overlay';
+        overlay.innerHTML =
+            '<div class="success-box">' +
+            '<div class="success-icon">🎉</div>' +
+            '<h2 class="success-title">ERFOLG!</h2>' +
+            '<p class="success-message"></p>' +
+            '<button class="success-close" onclick="this.closest(\'.success-overlay\').remove()">COOL! ✓</button>' +
+            '</div>';
+        overlay.querySelector('.success-message').textContent = message;
+        document.body.appendChild(overlay);
+    }
+})();
+</script>
