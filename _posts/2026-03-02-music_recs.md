@@ -12,7 +12,7 @@ Schickt gerne eure Youtube Music/Spotify Playlist an Falko oder Susi damit wir d
 
 Oder probiert das hier:
 
-<form action="https://formsubmit.co/A4026D6C-A9F7-4234-8F4A-150E3230DD05-party" method="POST" />
+<form action="https://formsubmit.co/A4026D6C-A9F7-4234-8F4A-150E3230DD05-party" method="POST">
 
     <input type="hidden" name="_subject" value="Neue Musik-Empfehlung für die Party! 🎵">
     <input type="hidden" name="_captcha" value="true">
