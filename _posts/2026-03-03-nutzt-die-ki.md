@@ -10,6 +10,8 @@ Nutzt Gemini und Co!
 
 ![Jorts]({{ '/assets/images/jorts.png' | relative_url }})
 
+> "Hier ist eine Kostüminspiration für deine 80er-Jahre-Party. Ich habe den Look mit dem gewünschten Vokuhila, Jorts und einem passenden Mötley Crüe-Shirt zusammengestellt, um den Rock-Vibe der Ära perfekt einzufangen. Dazu gehören natürlich auch Klassiker wie eine Boombox, Fishnet-Ärmel und Neon-Akzente."
+
 Wenn ihr tolle Fotos generiert habt, schickt Sie an Falko oder Susi per Whatsapp/Signal. Wenn genug Fotos zusammenkommen, können wir die generierten Fotos auf der Party zeigen.
 
 <form action="https://formsubmit.co/c4146591baace61f70b409ce1a79caa1" method="POST">
