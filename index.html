@@ -53,6 +53,51 @@
             </div>
         </section>
 
+        <section class="reservation-section">
+            <h2 class="reservation-title">ANMELDUNG! ⚡</h2>
+            <p class="reservation-subtitle">Sag uns Bescheid, dass du dabei bist!</p>
+            
+            <form action="https://formsubmit.co/your@email.com" method="POST" class="reservation-form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="Neue Party-Anmeldung! 🎉">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Dein Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Anzahl Gäste *</label>
+                    <input type="number" id="guests" name="guests" placeholder="1" min="1" max="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dietary">Ernährungswünsche</label>
+                    <textarea id="dietary" name="dietary" placeholder="Vegetarisch, Vegan, Allergien, etc. (optional)" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" placeholder="Grüße, Fragen, Song-Wünsche... (optional)" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <span class="button-text">DABEI SEIN! 🎸</span>
+                </button>
+            </form>
+            
+            <div class="form-note">
+                <p>💡 <strong>HINWEIS:</strong> Dies ist eine Demo-Version. Bitte ersetze "your@email.com" im Formular mit deiner echten Email-Adresse!</p>
+            </div>
+        </section>
+
         <div class="decorative-elements">
             <div class="cassette cassette-left">📼</div>
             <div class="boombox boombox-right">📻</div>
