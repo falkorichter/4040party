@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Recommend some music and get in the mood!"
-date: 2026-03-03
+date: 2026-03-02
 ---
 
 Wenn ihr euch schon einmal eingrooven wollt, hier sammeln wir Playlisten die Ihr empgehlen könnt.
