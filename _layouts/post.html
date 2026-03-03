@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<header class="header">
+    <div class="logo">J</div>
+    <a href="{{ site.baseurl }}/" class="back-link">← Startseite</a>
+</header>
+
+<article class="news post-article">
+    <h2 class="news-title">{{ page.title }}</h2>
+    <p class="post-date">{{ page.date | date: "%d. %B %Y" }}</p>
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>

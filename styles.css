@@ -182,7 +182,6 @@ body {
     text-align: center;
     margin: 2rem 0;
 }
-
 .tagline p {
     font-size: 2rem;
     color: #ffff00;
@@ -204,14 +203,12 @@ body {
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
-
 .detail-item {
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
     font-size: 1.3rem;
 }
-
 .detail-label {
     color: #00d4ff;
     font-weight: bold;
@@ -219,10 +216,59 @@ body {
     margin-right: 1rem;
     min-width: 150px;
 }
-
 .detail-value {
     color: #ff6600;
     font-weight: bold;
+}
+
+/* News Section */
+.news {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid #ff00ff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+.news-title {
+    font-size: 2rem;
+    color: #ff00ff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+.news-item {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1.2rem 0;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+}
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.news-link {
+    color: #00d4ff;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+}
+.news-link:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
+}
+.instagram-embed-wrapper {
+    margin-top: 1rem;
+    text-align: center;
 }
 
 /* Masterplan */
@@ -230,7 +276,6 @@ body {
     text-align: center;
     margin: 2rem 0;
 }
-
 .masterplan p {
     font-size: 2.5rem;
     background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
@@ -251,7 +296,6 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
 }
-
 .location-title {
     font-size: 2rem;
     color: #ffff00;
@@ -259,14 +303,12 @@ body {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
-
 .location-details {
     font-size: 1.8rem;
     color: #ff00ff;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
 }
-
 .location-details div {
     margin: 0.5rem 0;
 }
@@ -275,47 +317,39 @@ body {
 .decorative-elements {
     position: relative;
 }
-
 .cassette, .boombox, .star {
     position: absolute;
     font-size: 3rem;
     animation: float 3s ease-in-out infinite;
 }
-
 .cassette-left {
     left: 5%;
     top: -100px;
     animation-delay: 0s;
 }
-
 .boombox-right {
     right: 5%;
     top: -100px;
     animation-delay: 1s;
 }
-
 .star {
     font-size: 2rem;
 }
-
 .star-1 {
     left: 10%;
     top: 50px;
     animation-delay: 0.5s;
 }
-
 .star-2 {
     right: 15%;
     top: 100px;
     animation-delay: 1.5s;
 }
-
 .star-3 {
     left: 50%;
     top: 150px;
     animation-delay: 2s;
 }
-
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -482,6 +516,53 @@ body {
 .form-note strong {
     color: #ff00ff;
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+/* Blog Post */
+.back-link {
+    display: inline-block;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: color 0.2s;
+}
+.back-link:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
+}
+
+.post-article {
+    margin-top: 2rem;
+}
+.post-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+.post-content {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.7;
+}
+.post-content p {
+    margin: 1rem 0;
+}
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 2rem auto;
+}
+.post-content a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.post-content a:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.6);
 }
 
 /* Responsive Design */
@@ -570,4 +651,65 @@ body {
     .event-details {
         padding: 1rem;
     }
+}
+
+/* 80s Retro Blockquote Style */
+blockquote {
+    background: rgba(26, 30, 71, 0.8);
+    border-left: 6px solid #ff00ff; /* Neon magenta border */
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    position: relative;
+    color: #00d4ff; /* Neon cyan text */
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.6;
+    border-radius: 0 10px 10px 0;
+    
+    /* Double glow effect: magenta on the outside, cyan on the inside */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.4),
+                inset 0 0 15px rgba(0, 212, 255, 0.2);
+    
+    /* Slightly dark text shadow to ensure readability against the bright text */
+    text-shadow: 1px 1px 3px #0a0e27;
+    backdrop-filter: blur(5px);
+}
+
+/* Giant glowing quote mark in the background */
+blockquote::before {
+    content: '"';
+    font-size: 6rem;
+    color: #ffff00; /* Neon yellow */
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    opacity: 0.15;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    text-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+    pointer-events: none; /* Prevents it from interfering with text selection */
+}
+
+/* Style for any paragraph tags inside the blockquote */
+blockquote p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Cite or author attribution style */
+blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+blockquote cite::before {
+    content: '— ';
+    color: #00ff00; /* Neon green dash */
 }

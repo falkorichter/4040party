@@ -1,110 +1,69 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVE THE DATE! DOUBLE POWER! - 40 Jahre Party</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="geometric-bg"></div>
-    
-    <div class="container">
-        <header class="header">
-            <div class="logo">J</div>
-            <h1 class="title-main">SAVE THE DATE!</h1>
-            <h2 class="title-sub">DOUBLE POWER!</h2>
-        </header>
+---
+layout: default
+title: "SAVE THE DATE! DOUBLE POWER! - 40 Jahre Party"
+---
+<header class="header">
+    <div class="logo">J</div>
+    <h1 class="title-main">SAVE THE DATE!</h1>
+    <h2 class="title-sub">DOUBLE POWER!</h2>
+</header>
 
-        <div class="poster-frame">
-            <img src="https://github.com/user-attachments/assets/a54f1947-209d-4cc4-ae67-0b00f642e8b5" 
-                 alt="40 Jahre Party Poster" 
-                 class="poster-image">
-        </div>
+<div class="poster-frame">
+    <img src="https://github.com/user-attachments/assets/a54f1947-209d-4cc4-ae67-0b00f642e8b5"
+         alt="40 Jahre Party Poster"
+         class="poster-image">
+</div>
 
-        <section class="tagline">
-            <p>40 JAHRE... DAS IST ERST DAS WARM-UP!</p>
-        </section>
+<section class="tagline">
+    <p>40 JAHRE... DAS IST ERST DAS WARM-UP!</p>
+</section>
 
-        <section class="event-details">
-            <div class="detail-item">
-                <span class="detail-label">WER:</span>
-                <span class="detail-value">Ihr? Gib uns Bescheid! ⚡</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">WANN:</span>
-                <span class="detail-value">18. April 2026</span>
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">DRESSCODE:</span>
-                <span class="detail-value">80er, Eighties</span>
-            </div>
-        </section>
-
-        <section class="masterplan">
-            <p>DETAIL MASTERPLAN FOLGT!</p>
-        </section>
-
-        <section class="location">
-            <div class="location-title">Location:</div>
-            <div class="location-details">
-                <div>KUFA, Lehrter Str.</div>
-                <div>Berlin!</div>
-            </div>
-        </section>
-
-        <section class="reservation-section">
-            <h2 class="reservation-title">ANMELDUNG! ⚡</h2>
-            <p class="reservation-subtitle">Sag uns Bescheid, dass du dabei bist!</p>
-            
-            <form action="https://formsubmit.co/your@email.com" method="POST" class="reservation-form">
-                <!-- FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="Neue Party-Anmeldung! 🎉">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Dein Name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" placeholder="deine@email.de" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="guests">Anzahl Gäste *</label>
-                    <input type="number" id="guests" name="guests" placeholder="1" min="1" max="10" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="dietary">Ernährungswünsche</label>
-                    <textarea id="dietary" name="dietary" placeholder="Vegetarisch, Vegan, Allergien, etc. (optional)" rows="3"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Nachricht</label>
-                    <textarea id="message" name="message" placeholder="Grüße, Fragen, Song-Wünsche... (optional)" rows="4"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">
-                    <span class="button-text">DABEI SEIN! 🎸</span>
-                </button>
-            </form>
-            
-            <div class="form-note">
-                <p>💡 <strong>HINWEIS:</strong> Dies ist eine Demo-Version. Bitte ersetze "your@email.com" im Formular mit deiner echten Email-Adresse!</p>
-            </div>
-        </section>
-
-        <div class="decorative-elements">
-            <div class="cassette cassette-left">📼</div>
-            <div class="boombox boombox-right">📻</div>
-            <div class="star star-1">✨</div>
-            <div class="star star-2">✨</div>
-            <div class="star star-3">✨</div>
-        </div>
+<section class="event-details">
+    <div class="detail-item">
+        <span class="detail-label">WER:</span>
+        <span class="detail-value">Ihr? Gib uns Bescheid! ⚡</span>
     </div>
-</body>
-</html>
+    <div class="detail-item">
+        <span class="detail-label">WANN:</span>
+        <span class="detail-value">18. April 2026: 19:00 pünktlich</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-label">DRESSCODE:</span>
+        <span class="detail-value">80er, Eighties</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-label">KIDS:</span>
+        <span class="detail-value">Wir bitten anreisende Gäste höflichst einen Babysitter in der Heimat zu finden. Berliner Gäste können sich bei uns melden. Hanne und Hedda feiern auch kurz mit. Kinder müssen mit ihren Eltern tanzen.</span>
+    </div>
+</section>
+
+<section class="news">
+    <h3 class="news-title">🗞️ NEWS</h3>
+    <ul class="news-list">
+        {% for post in site.posts %}
+        <li class="news-item">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="news-link">{{ post.title }} ➜</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="masterplan">
+    <p>DETAIL MASTERPLAN FOLGT!</p>
+</section>
+
+<section class="location">
+    <div class="location-title">Location:</div>
+    <div class="location-details">
+        <div>KUFA, Lehrter Str. 35</div>
+        <div>Berlin!</div>
+    </div>
+</section>
+
+<div class="decorative-elements">
+    <div class="cassette cassette-left">📼</div>
+    <div class="boombox boombox-right">📻</div>
+    <div class="star star-1">✨</div>
+    <div class="star star-2">✨</div>
+    <div class="star star-3">✨</div>
+</div>

@@ -1,6 +1,10 @@
 # 4040party - 80s Retro Party Landing Page
 
-A vibrant 80s/retro themed landing page for a 40th birthday party celebration! 🎉
+A vibrant 80s/retro themed landing page for a 40th birthday party celebration, built with [Jekyll](https://jekyllrb.com/)! 🎉
+
+Available at https://falkorichter.github.io/4040party/
+
+Available at https://falkorichter.github.io/4040party/gemini/ for a version that was created by gemini (please ignore for now)
 
 ## 🎨 Features
 
@@ -9,28 +13,28 @@ A vibrant 80s/retro themed landing page for a 40th birthday party celebration! �
 - **Glowing Text Effects**: Neon-style text with glow and pulse animations
 - **Reservation Form**: Serverless form submission using FormSubmit.co
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop
-- **No Dependencies**: Pure HTML5 and CSS3, no JavaScript required
+- **Jekyll-Powered**: Uses Jekyll layouts, Liquid templating, and posts for news updates
 - **Fast Loading**: Lightweight and performant
 
 ## 🚀 Quick Start
 
-Simply open `index.html` in your web browser:
+This is a [Jekyll](https://jekyllrb.com/) project. To run it locally:
 
 ```bash
-# Using Python 3
-python3 -m http.server 8000
+# Install dependencies
+bundle install
 
-# Or using PHP
-php -S localhost:8000
+# Serve locally with live reload
+bundle exec jekyll serve
 
-# Then open: http://localhost:8000
+# Then open: http://localhost:4000/4040party/
 ```
 
 ## 📅 Event Details
 
 - **Event**: 40th Birthday Party - "SAVE THE DATE! DOUBLE POWER!"
 - **Date**: 18. April 2026
-- **Location**: KUFA, Lehrter Str., Berlin
+- **Location**: KUFA, Lehrter Str. 35, Berlin
 - **Dresscode**: 80er, Eighties
 - **Theme**: 80s/Retro
 
@@ -84,6 +88,10 @@ To customize the landing page:
 2. **Change Colors**: Modify the color values in `styles.css`
 3. **Replace Image**: Update the poster image URL in `index.html` (line 20)
 4. **Configure Email**: Update FormSubmit email in the form action URL
+3. **Replace Image**: Update the poster image URL in `index.html`
+4. **Add News Posts**: Create new Markdown files in `_posts/` (format: `YYYY-MM-DD-title.md`)
+5. **Edit Layouts**: Modify templates in `_layouts/`
+6. **Site Settings**: Update title, description, and base URL in `_config.yml`
 
 ## 📱 Browser Support
 
@@ -92,10 +100,15 @@ To customize the landing page:
 - Safari (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📄 Files
+## 📄 Project Structure
 
-- `index.html` - Main HTML structure
+- `_config.yml` - Jekyll site configuration
+- `Gemfile` - Ruby dependencies (Jekyll)
+- `index.html` - Main page (uses `default` layout and Liquid templating)
 - `styles.css` - 80s retro styling and animations
+- `_layouts/` - Jekyll layout templates (`default.html`, `post.html`)
+- `_posts/` - News posts in Markdown
+- `assets/` - Static assets (images)
 
 ## 🎉 Party On!
 
