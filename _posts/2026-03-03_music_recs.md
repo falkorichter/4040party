@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Recomment some music and get in the mood!"
+title: "Recommend some music and get in the mood!"
 date: 2026-03-03
 ---
 
