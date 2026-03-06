@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Music Preview"
+date: 2026-03-06
+---
+
+Wir haben Frido gefragt ob er eine Stunde auflegen will. Ich glaube das ist ein Ja:
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/BnRVpL_h0JM?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
